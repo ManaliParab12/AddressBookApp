@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/form.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <title>Address Book Form</title>
+  <script defer src="../js/Person.js"></script>
+  <script defer src="../js/form.js"></script>
+</head>
+
+<body>
+  <header class="header-content header">
+    <div class="logo-content">
+      <img src="../assets/images/logo.jpg" alt="">
+      <div>
+        <span class="person-text">ADDRESS</span><br>
+        <span class="person-text person-address">BOOK</span>
+      </div>
+    </div>
+  </header>
+  <div class="form-content">
+    <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)" autocomplete="off">
+      <div class="form-head">Person Address Form
+        <a href="./home.html" button id="cancelButton" class="cancelButton" ><i class="fa fa-close"></i></button></a>
+      </div>
+      <div class="row-content">
+        <label class="label text" for="name">Full Name</label>
+        <input class="input" type="text" id="name" name="name" placeholder="Your name..." required >
+        <error-output class="text-error" for="text"></error-output>
+      </div>
+      <div class="row-content">
+        <label class="label text" for="address">Address</label>
+        <textarea id="address" class="input" name="address" placeholder="" style="height: 100px"></textarea>
+      </div>
+      <div class="row-content">
+        <label class="label text" for="address-details"></label>
+        <div class= "address-details">
+        <div>
+          <select id="city" name="city">
+            <option value="Select City">Select City</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Satara">Satara</option>
+            <option value="Pune">Pune</option>
+            <option value="Surat">Surat</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="Udaipur">Udaipur</option>
+          </select>
+        </div>
+        <div>
+          <select id="state" name="state">
+            <option value="Select State">Select State</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Gujrat">Gujrat</option>
+            <option value="Rajasthan">Rajasthan</option>
+          </select>
+        </div>
+        <div class="row-content">
+            <input class="input" type="text" id="zipcode" name="zipcode" placeholder="Zip Code" required>
+        </div>
+        </div>
+      </div>
+      <div class="row-content">
+        <label class="label text" for="number">Phone Number</label> 
+        <input class="input" type="tel" id="number" name="number" placeholder="" >
+        <error-output class="number-error" for="number"></error-output>
+      </div>
+      <div class="buttonParent">
+        <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+        <div class="submit-reset">
+      <!-- <div class="buttonParent submit-reset" > -->
+          <button type="submit" class="button submitButton" id="submitButton">Add</button>
+          <button type="reset" class="resetButton button">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
